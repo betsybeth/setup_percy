@@ -9,7 +9,7 @@ createTestCafe('localhost', 1337, 1338)
 
         const remoteConnection =  testcafe.createBrowserConnection();
             runner
-                .src('./tests/firsttest.js')
+                .src('./tests/login.js')
                 .browsers(["chrome"])
                 .run()
                 .then(failedCount => {

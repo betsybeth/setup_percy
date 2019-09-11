@@ -10,11 +10,9 @@ jobs:
           name: install dependencies
           command: |
             yarn install
-            yarn add percy-cli
             
-      
-      # - run: 
-      #     name: run our tests
-      #     command: |
-      #       yarn test
-      #       percy snapshot public
+      - run: 
+          name: run our tests
+          command: |
+            yarn test
+            percy snapshot public

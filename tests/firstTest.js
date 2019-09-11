@@ -3,7 +3,7 @@ import percySnapshot from '@percy/testcafe';
 
 
 fixture('Getting Started')
-       .page('localhost:3000/login')
+       .page('https://brightevents-app.herokuapp.com/login')
    
  
 
@@ -16,6 +16,6 @@ test('My first test', async testController => {
        .wait(4000)
        await percySnapshot(testController, "Succesfully login");
        const documentUri = await testController.eval(() => document.documentURI)
-        await testController.expect(documentUri).eql("http://localhost:3000/dashboard")
+        await testController.expect(documentUri).eql("https://brightevents-app.herokuapp.com/dashboard")
 })
 

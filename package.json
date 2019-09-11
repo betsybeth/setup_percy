@@ -1,0 +1,15 @@
+{
+  "name": "setup_percy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/betsybeth/setup_percy.git",
+  "author": "<bethwambuimuniu@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "percy exec -- node index.js"
+  },
+  "dependencies": {
+    "@percy/testcafe": "^0.2.0",
+    "testcafe": "^1.4.3"
+  }
+}

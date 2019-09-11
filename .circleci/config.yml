@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8-browsers
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            yarn install
+            yarn add percy-cli
+            
+      
+      # - run: 
+      #     name: run our tests
+      #     command: |
+      #       yarn test
+      #       percy snapshot public
